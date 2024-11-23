@@ -1,7 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 // Layout
-import TodoLayout from './components/layout/todo'
-import AuthLayout from './components/layout/auth'
+import TodoLayout from '@/components/layout/todo'
+import AuthLayout from '@/components/layout/auth'
+// Page
+import NotFoundPage from '@/pages/NotFoundPage'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <div>Not Found Page</div>,
+    element: <NotFoundPage />,
   },
 ])
 
