@@ -1,14 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom'
+// Layout
+import TodoLayout from './components/layout/todo'
+import AuthLayout from './components/layout/auth'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Main</div>,
-    children: [],
+    element: <TodoLayout />,
+    children: [
+      {
+        index: true,
+        element: <div>Todo Main</div>,
+      },
+    ],
   },
   {
     path: '/auth',
-    element: <div>Auth</div>,
+    element: <AuthLayout />,
     children: [
       {
         path: 'login',
