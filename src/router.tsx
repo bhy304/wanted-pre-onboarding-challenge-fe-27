@@ -3,7 +3,8 @@ import { createBrowserRouter } from 'react-router-dom'
 import TodoLayout from '@/components/layout/todo'
 import AuthLayout from '@/components/layout/auth'
 // Page
-import NotFoundPage from '@/pages/NotFoundPage'
+import NotFoundPage from '@/pages/not-found'
+import LoginPage from '@/pages/login'
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'login',
-        element: <div>Login</div>,
+        element: <LoginPage />,
       },
       {
         path: 'signup',
