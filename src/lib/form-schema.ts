@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-const formSchema = z.object({
+export const authFormSchema = z.object({
   email: z
     .string()
     .min(1, { message: '이메일을 입력해주세요.' })
@@ -10,4 +10,7 @@ const formSchema = z.object({
   }),
 })
 
-export default formSchema
+export const todoFormSchema = z.object({
+  title: z.string(),
+  content: z.string()
+})

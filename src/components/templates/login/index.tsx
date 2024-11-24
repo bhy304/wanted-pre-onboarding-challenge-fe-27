@@ -4,7 +4,7 @@ import { useToast } from '@/hooks/use-toast'
 import { login } from '@/api/services/auth'
 import { ErrorResponse } from '@/interfaces/http'
 import { AUTH_VALIDATION_MESSAGE } from '@/enums'
-import formSchema from '@/lib/form-schema'
+import { authFormSchema } from '@/lib/form-schema'
 
 import AuthForm from '@/components/forms'
 
@@ -15,7 +15,7 @@ const LoginForm = () => {
   const onSubmit = async ({
     email,
     password,
-  }: z.infer<typeof formSchema>): Promise<void> => {
+  }: z.infer<typeof authFormSchema>): Promise<void> => {
     try {
       const response = await login({ email, password })
 

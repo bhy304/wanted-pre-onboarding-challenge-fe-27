@@ -19,7 +19,7 @@ import {
   Input,
 } from '@ui'
 
-import formSchema from '@/lib/form-schema'
+import { authFormSchema } from '@/lib/form-schema'
 
 type AUTH_TYPE = 'LOGIN' | 'SIGNUP'
 
@@ -42,10 +42,13 @@ const AuthForm = ({
   onSubmit,
 }: {
   type: AUTH_TYPE
-  onSubmit: ({ email, password }: z.infer<typeof formSchema>) => Promise<void>
+  onSubmit: ({
+    email,
+    password,
+  }: z.infer<typeof authFormSchema>) => Promise<void>
 }) => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof authFormSchema>>({
+    resolver: zodResolver(authFormSchema),
     defaultValues: {
       email: '',
       password: '',
