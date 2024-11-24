@@ -6,6 +6,7 @@ import AuthLayout from '@/components/layout/auth'
 import NotFoundPage from '@/pages/not-found'
 import LoginPage from '@/pages/login'
 import SignupPage from '@/pages/signup'
+import TodoPage from '@/pages/todo'
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div>Todo Main</div>,
+        element: <TodoPage />,
       },
     ],
   },
