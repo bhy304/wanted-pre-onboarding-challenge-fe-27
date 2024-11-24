@@ -5,6 +5,7 @@ import AuthLayout from '@/components/layout/auth'
 // Page
 import NotFoundPage from '@/pages/not-found'
 import LoginPage from '@/pages/login'
+import SignupPage from '@/pages/signup'
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'signup',
-        element: <div>Signup</div>,
+        element: <SignupPage />,
       },
     ],
   },
